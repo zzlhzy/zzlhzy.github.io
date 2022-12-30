@@ -1,24 +1,20 @@
-<head>
-<title>登录界面</title>
-</head>
-<body>
-<input type="password" placeholder="Password" id="pass">
-</div>
-<button οnclick="login()">登录</button>
-</div>
-var password = document.getElementById("pass").value;
-if(password=="123456"){
-alert("登录成功");
-window.location.href= "hzy.html";
-return false;
+<SCRIPT language=Javascript>
+function password() {
+var testV = 1;
+var pass1 = prompt('请输入密码:','':);
+while (testV < 3) {
+if (!pass1)
+history.go(-1);
+if (pass1 == "这里输入你想设置的密码") {
+alert("密码正确!');
+break;
 }
-else{
-alert("账号或密码错误");
-window.location.href= "index.html";
-return false;
+testV+=-1;
+var pass1 = prompt('密码错误!请重新输入:');
 }
+if (pass1!="password" & testV ==3)
+history.go(-1);
+return " ";
 }
-</script>
-
-</body>
-</html>
+document.write(password());
+</SCRIPT>
