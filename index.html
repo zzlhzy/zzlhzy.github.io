@@ -1,23 +1,16 @@
-<html lang="en">
 <head>
-<meta charset="UTF-8">
 <title>登录界面</title>
 </head>
 <body>
-<div class="login">
-<h1>Welcome</h1>
-<div class="text">
-<i class="fa fa-lock" aria-hidden="true"></i><!-- Font Awesome -->
 <input type="password" placeholder="Password" id="pass">
 </div>
 <button οnclick="login()">登录</button>
 </div>
-<script type="text/javascript">
 function login(){
 var password = document.getElementById("pass").value;
 if(password=="123456"){
 alert("登录成功");
-window.location = "hzy.html";
+window.location.href= "hzy.html";
 return false;
 }
 else{
