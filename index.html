@@ -6,9 +6,22 @@
 <body>
 
 
-  <input id="psd" type="password">&nbsp;&nbsp; <span id="psdJudge"></span><br/><br/>
-  <button id="validation">点击验证</button>
-  <script type="text/javascript" src="pass.js" ></script>
+<input id="psd" type="password">&nbsp;&nbsp; <span id="psdJudge"></span><br/><br/>
+<button id="validation">点击验证</button>
+<script type="text/javascript">
+    validation.addEventListener('click', () => {
+    let validation = document.getElementById('validation');
+    let psdJudge = document.getElementById('psdJudge');
+    let length = psd.value.length;
+    if (length >= 6 && length <= 16) {
+        psdJudge.innerHTML = '输入正确信息'
+        setTimeout(1000)
+        window.open("zzlhzy.github.io/hzy.html");
+    }else {
+        psdJudge.innerHTML = '错误信息';
+    }
+})
+</script>
 
 
 </body>
