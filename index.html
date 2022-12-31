@@ -1,21 +1,32 @@
-<!doctype html>
-<html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
- </head>
- <body>
-  <script type="text/javascript">
-	function checkUser(){
-		var username=document.getElementById("uname");
-		if(uname.value=="hzy"){
-				location.href="zzlhzy.github.io/hzy.html";
-		}else{
-			alert("用户或密码输入错误");
-		}
-	}
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>韩总私人网</title>
+</head>
+<body>
+
+<div>
+  <h3>请输入密码</h3>
+  <input name="password" id="pw" type="password" class="kuang_txt possword" placeholder="密码"></input>
+  <input name="注册" type="submit" class="btn_zhuce" value="注册">
+</div>
+
+
+<script type="text/javascript">
+    function checkpassword() {
+      var password = document.getElementById("pw").value;
+      var repassword = hanzhiyuan;
+      
+      if(password == repassword) {
+         document.getElementById("tishi").innerHTML="<br><font color='green'>密码正确</font>";
+         setTimeout("javascript:location.href='hzy.html'", 5);
+        
+     }else{
+       document.getElementById("tishi").innerHTML="<br><font color='red'>密码错误</font>";
+       setTimeout("javascript:location.href='index.html'", 5);
+     }
+    }
   </script>
-  用户名：<input type="text" id="uname" name="uname"/><br/>
-  <input type="button" id="btnSubmit" οnclick="checkUser()" value="登录"/>
- </body>
-</html>
+  </body>
+  </html>
+
