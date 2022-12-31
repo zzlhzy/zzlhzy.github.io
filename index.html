@@ -13,15 +13,12 @@
 
 
 <script type="text/javascript">
-      var password = document.getElementById("pw").value;
-      
-      if(password == 'hanzhiyuan') {
-        window.location.href="https://zzlhzy.github.io/hzy.html"
-        
-     }else{
-       document.getElementById("tishi").innerHTML="<br><font color='red'>密码错误</font>";
-       setTimeout("javascript:location.href='index.html'", 5);
-     }
+    var password = document.getElementById("pw").value;
+      if(password == 'hanzhiyuan'){
+        window.location.href='zzlhzy.github.io/hzy.hyml';}
+
+      if(password !== 'hanzhiyuan'){
+        window.location.href='zzlhzy.github.io';}
 
 </script>
 </body>
