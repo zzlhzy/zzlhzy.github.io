@@ -11,14 +11,21 @@
   <input name="登录" type="submit" class="btn_zhuce" value="登录">
 </div>
 
-
 <script type="text/javascript">
+  document.addEventListener('contextmenu',
+        event => event.preventDefault()
+);
+  document.addEventListener("keydown", function (event){
+  if (event.ctrlKey){
+    event.preventDefault();
+  }
+  if(event.keyCode == 123){
+    event.preventDefault();
+  }
+});
     var password = document.getElementById("pw").value;
       if(password == 'hanzhiyuan'){
         window.location.href='zzlhzy.github.io/hzy.hyml';}
-
-      if(password !== 'hanzhiyuan'){
-        window.location.href='zzlhzy.github.io';}
 
 </script>
 </body>
