@@ -7,18 +7,18 @@
 
 
 <input id="psd" type="password">&nbsp;&nbsp; <span id="psdJudge"></span><br/><br/>
-<button id="validation">点击验证</button>
+<button id="validation">登录</button>
 <script type="text/javascript">
     validation.addEventListener('click', () => {
     let validation = document.getElementById('validation');
     let psdJudge = document.getElementById('psdJudge');
     let length = psd.value.length;
     if (length >= 6 && length <= 16) {
-        psdJudge.innerHTML = '输入正确信息'
+        psdJudge.innerHTML = '密码正确'
         setTimeout(1000)
-        window.open("zzlhzy.github.io/hzy.html");
+        window.open("hzy.html");
     }else {
-        psdJudge.innerHTML = '错误信息';
+        psdJudge.innerHTML = '密码错误';
     }
 })
 </script>
