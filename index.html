@@ -8,25 +8,22 @@
 <div>
   <h3>请输入密码</h3>
   <input name="password" id="pw" type="password" class="kuang_txt possword" placeholder="密码"></input>
-  <input name="注册" type="submit" class="btn_zhuce" value="注册">
+  <input name="登录" type="submit" class="btn_zhuce" value="登录">
 </div>
 
 
 <script type="text/javascript">
-    function checkpassword() {
       var password = document.getElementById("pw").value;
-      var repassword = new String("hanzhiyuan")
       
-      if(password == repassword) {
-
+      if(password == 'hanzhiyuan') {
         window.location.href="https://zzlhzy.github.io/hzy.html"
         
      }else{
        document.getElementById("tishi").innerHTML="<br><font color='red'>密码错误</font>";
        setTimeout("javascript:location.href='index.html'", 5);
      }
-    }
-  </script>
-  </body>
-  </html>
+
+</script>
+</body>
+</html>
 
