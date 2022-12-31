@@ -1,23 +1,25 @@
-<html lang="zh">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>韩总私人网</title>
+
+
+
+<meta http-equiv="Content-Language" content="zh-cn" />
+<title>输入框</title>
 </head>
 <body>
+        <form>
+            <input id="input"  type="text" placeholder="密码" />
+        </form>
+        <button onclick="btn()">登录</button>
 
-<div>
-  <h3>请输入密码</h3>
-  <input name="password" id="pw" type="password" class="kuang_txt possword" placeholder="密码"></input>
-  <input name="登录" type="submit" class="btn_zhuce" value="登录">
-</div>
-
-<script type="text/javascript">
-  var password = document.getElementById("pw").value;
-  if(password == 'hanzhiyuan'){
-    alert("密码正确")
-    setTimeout(2000)
-    window.location.href='zzlhzy.github.io/hzy.html';}
-</script>
+    <script>
+      var x=  document.getElementById("input")//获取输入框元素
+      if(x == '123'){
+        window.location.href="https://zzlhzy.github.io/hzy.html";
+      }
+    </script>
 </body>
 </html>
-
+  
