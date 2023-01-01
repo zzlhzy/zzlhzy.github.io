@@ -4,10 +4,43 @@
 <title>502</title>
 </head>
 <body>
+
+<script type="text/javascript">
+    function toggleFullScreen(e) {
+                if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement && !window.navigator.standalone) {  // current working methods
+                    if (document.documentElement.requestFullscreen) {
+                        document.documentElement.requestFullscreen();
+                    } else if (document.documentElement.msRequestFullscreen) {
+                        document.documentElement.msRequestFullscreen();
+                    } else if (document.documentElement.mozRequestFullScreen) {
+                        document.documentElement.mozRequestFullScreen();
+                    } else if (document.documentElement.webkitRequestFullscreen) {
+                        document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                    }
+                    $('body').css({'height': screen.height});
+                    fullSreen = true;
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    } else if (document.mozCancelFullScreen) {
+                        document.mozCancelFullScreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    }else if(document.cancelFullScreen){
+                        document.cancelFullScreen();
+                    }
+                    $('body').css({'height': 'auto'});
+                    fullSreen = false;
+                }
+    }
+</script>
+
 <h align="center"><font size="7">502</font></h>
 <h1>你知道你在做什么吗！快关掉！(っ °Д °;)っ</h1>
-<video autoplay="autoplay" loop="loop" height=100% width=100%>
-  <source src="video/192d9a98d782d9c74c96f09db9378d93.mp4" type="video/mp4">
+<video autoplay="autoplay" loop="loop">
+  <source src="video/192d9a98d782d9c74c96f09db9378d93.mp4" type="video/mp4"/>
 </video>
 </body>
 </html>
