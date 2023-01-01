@@ -6,35 +6,7 @@
 <body>
 
 <script type="text/javascript">
-    function toggleFullScreen(e) {
-                if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement && !window.navigator.standalone) {  // current working methods
-                    if (document.documentElement.requestFullscreen) {
-                        document.documentElement.requestFullscreen();
-                    } else if (document.documentElement.msRequestFullscreen) {
-                        document.documentElement.msRequestFullscreen();
-                    } else if (document.documentElement.mozRequestFullScreen) {
-                        document.documentElement.mozRequestFullScreen();
-                    } else if (document.documentElement.webkitRequestFullscreen) {
-                        document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-                    }
-                    $('body').css({'height': screen.height});
-                    fullSreen = true;
-                } else {
-                    if (document.exitFullscreen) {
-                        document.exitFullscreen();
-                    } else if (document.msExitFullscreen) {
-                        document.msExitFullscreen();
-                    } else if (document.mozCancelFullScreen) {
-                        document.mozCancelFullScreen();
-                    } else if (document.webkitExitFullscreen) {
-                        document.webkitExitFullscreen();
-                    }else if(document.cancelFullScreen){
-                        document.cancelFullScreen();
-                    }
-                    $('body').css({'height': 'auto'});
-                    fullSreen = false;
-                }
-    }
+  Document.exitFullscreen ()
 </script>
 
 <h align="center"><font size="7">502</font></h>
