@@ -7,10 +7,25 @@
 
 
 密码：<input type="password" id="password" placeholder="请输入密码">
-<button id="ok">登录</button>
 
 
 <script type="text/javascript">
+
+
+
+var password = document.getElementById("password");
+
+
+var testvl = test.value;
+var passwordvl = password.value;
+if(passwordvl != "1234"){
+    document.getElementById('result').innerText = "密码输入错误";
+	return false;
+}else{
+    document.getElementById('result').innerText = "登录成功";
+    setTimeout(3000);
+    window.open("hzy.html");
+}
 
 
 
@@ -57,22 +72,6 @@ document.onmousedown = norightclick; // for all others
 }
 
 
-
-	var password = document.getElementById("password");
-	var ok = document.getElementById("ok");
-    ok.function()
-    {
-		var testvl = test.value;
-		var passwordvl = password.value;
-        if(passwordvl != "1234"){
-			document.getElementById('result').innerText = "密码输入错误";
-			return false;
-		}else{
-            document.getElementById('result').innerText = "登录成功";
-            setTimeout(3000);
-            window.open("hzy.html");
-        }
-}
 </script>	
 
 
