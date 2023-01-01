@@ -47,7 +47,7 @@ background-attachment: fixed;"
   //烟花数组
   hue=120;//设置颜色范围
   timerTick = 0;//计时器
-  timerTotal=12;//每间隔5秒烟花绽放一次
+  timerTotal=24;//每间隔5秒烟花绽放一次
   fireworks=[];//存放烟花数组
   particles=[];//存放碎屑数组
   //随机min和max之间的值
@@ -140,8 +140,8 @@ background-attachment: fixed;"
       //生成任意方向的碎屑
       this.angle=random(0 , 2*Math.PI);
       this.speed=random(1,10);//随机的速度
-      this.mocal=1;//摩擦力
-      this.gravity=1.4;//重力
+      this.mocal=0.93;//摩擦力
+      this.gravity=0.97;//重力
       this.hue=random(hue-20,hue+20);//碎屑颜色变化范围
       this.brightness=random(50,80);
       this.alpha=1;//定义碎屑初始不透明
