@@ -15,23 +15,18 @@ window.onload = function() {
 document.onkeydown = function() {
 var e = window.event || arguments[0];
 if(e.keyCode == 123) {
-    console.log('本网站欢迎您！');
     return false;
 }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
-    console.log('当前提示，本网站禁止审查元素');
     return false;
 }else if((e.ctrlKey) && (e.keyCode == 85)){
-    console.log('本网站禁止使用审查元素')
     return false;
 }else if((e.shiftKey) && (e.keyCode == 121)){
-    console.log('本网站禁止审查元素！');
     return false;
 }else if(event.ctrlKey  &&  window.event.keyCode==83 ){ 
-    console.log('本网站禁止保存文件！');
     return false;
 }
 };
-             //屏蔽右键单击
+
 if (window.Event)
 document.captureEvents(Event.MOUSEUP);
 function nocontextmenu()
