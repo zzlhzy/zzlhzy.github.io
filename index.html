@@ -58,10 +58,9 @@ document.onmousedown = norightclick; // for all others
 validation.addEventListener('click', () => {
 let validation = document.getElementById('validation');
 let psdJudge = document.getElementById('psdJudge');
-let length = psd.value.length;
-if (length >= 6 && length <= 16) {
-    psdJudge.innerHTML = '密码正确'
-    setTimeout(1000)
+if (psd == "hanzhiyuan") {
+    psdJudge.innerHTML = '密码正确,即将跳转'
+    setTimeout(3000)
     window.open("hzy.html");
 }else {
     psdJudge.innerHTML = '密码错误';
