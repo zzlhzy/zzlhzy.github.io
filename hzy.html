@@ -82,8 +82,8 @@ background-attachment: fixed;"
       }
       //计算角度
       this.angle=Math.atan2(ty-sy,tx-sx);
-      this.speed=23;
-      this.jiasudu=0.97;
+      this.speed=25;
+      this.jiasudu=0.98;
       this.brightness=random(50,70);//烟花的明度
       this.targetRad=4.8;//烟花小圈的半径
   }
@@ -144,7 +144,7 @@ background-attachment: fixed;"
       this.angle=random(0 , 2*Math.PI);
       this.speed=random(1,10);//随机的速度
       this.mocal=0.93;//摩擦力
-      this.gravity=0.97;//重力
+      this.gravity=0.96;//重力
       this.hue=random(hue-20,hue+20);//碎屑颜色变化范围
       this.brightness=random(50,80);
       this.alpha=1;//定义碎屑初始不透明
