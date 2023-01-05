@@ -5,7 +5,6 @@
 <meta charset="UTF-8">
 <title>韩总私人网</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
-<meta http-equiv="refresh" content="1">
 <style>
   body{
       margin: 0;
@@ -17,7 +16,16 @@
           background-size: cover;
   }
 </style>
-
+<script>
+    function refresh(){
+    url = location.href; //把当前页面的地址赋给变量 url
+    //分切变量 url 分隔符号为 "#"
+    if( url.indexOf("#") == -1){ //如果url后没有#
+        url += "#"; //加入 #
+        self.location.replace(url); //刷新页面
+    }
+}
+</script>
 </head>
 
 <body bgcolor="black">
