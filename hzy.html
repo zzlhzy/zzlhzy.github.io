@@ -224,37 +224,13 @@ background-attachment: fixed;"
   window.οnlοad=loop();
 
   
-  
-  
-  
-  function autoRefresh() {
-    if (getCookie("views") != 1) {
-        document.cookie = "views = 1";
-        if (getCookie("view") != 1)
-            location.reload()
-        else
-            refresh();//如果浏览器不允许写cookie 则用url刷新方法，确保万无一失。
-    } else{
-        delCookie("views");
+  window.onload = function(){
+    var url=document.location.href;  //获取浏览器访问栏里的地址
+    if( url.indexOf("r=")==-1 ){    //判断地址后面是否多了某些值，没有就进方法里进行刷新
+        var t = new Date();
+        window.location.href = "<%=request.getContextPath()%>/url?r="+t.getTime();
     }
-        
-}
-function getCookie(name) {
-    //获取指定名称的cookie的值
-    var arrStr = document.cookie.split("; ");
-    for ( var i = 0; i < arrStr.length; i++) {
-        var temp = arrStr[i].split("=");
-        if (temp[0] == name)
-            return unescape(temp[1]);
-    }
-    return null;
-}
- function delCookie(name){
-     //为了删除指定名称的cookie，可以将其过期时间设定为一个过去的时间 
-     var date = new Date();
-     date.setTime(date.getTime() - 10000);
-     document.cookie = name + "=a; expires=" + date.toGMTString();
- }
+} 
 
 
 
