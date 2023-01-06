@@ -195,7 +195,7 @@ background-attachment: fixed;"
       requestAnimationFrame(loop);
       hue+=0.5;
       //在源图像外显示目标图像。只有源图像外的目标图像部分会被显示，源图像是透明的。
-      ctx.globalCompositeOperation = 'destination-over';
+      ctx.globalCompositeOperation = 'destination-atop';
       ctx.fillRect(0,0,clientw,clienth);
       ctx.fillStyle='rgb(0,0,0,0.5)';
       //显示源图像和目标图像。
