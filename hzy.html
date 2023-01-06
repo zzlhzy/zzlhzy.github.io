@@ -33,6 +33,7 @@ background-attachment: fixed;"
 
 <canvas id="mycanvas"></canvas>
 <script>
+if(!window.name){ window.name = 'test'; window.location.reload(); }
   //window.requestAnimationFrame()这个API是浏览器提供的js全局方法，针对动画效果。
   window.requestAnimationFrame=(function(){
       return window.requestAnimationFrame||
