@@ -224,10 +224,11 @@ background-attachment: fixed;"
   window.οnlοad=loop();
 
 
-    if(!window.name){
-        window.name = 'test';
-        window.location.reload();
-    }
+
+    var i;
+    for (i = 1; i < 2; i++) {
+        window.location.reload("mycanvas");
+}
 
 
 
